@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard trap</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <p>After we open modal window we should move focus to it</p>
+    <div class="btn-group">
+        <button class="btn" id="openModal">Open modal</button>
+        <button class="btn">Another button</button>
+        <button class="btn">One more button</button>
+
+    </div>
+    <div class="modal hidden" id="modalWindow">
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="">
+            <input type="submit" name="" value="Send">
+        </form>
+    </div>
+    <div class="modalOverlay hidden" id="modalOverlay"></div>
+
+    <script type="text/javascript" src="../scripts/modal-trap.js"></script>
+</body>
+</html>
