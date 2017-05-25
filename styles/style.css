@@ -1,7 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 html, body {
     height: 100%;
     color: #373a3c;
     font-size: 100%;
+    padding: 1em;
 }
 
 .btn-group .btn {
@@ -21,6 +27,9 @@ html, body {
     margin-top: 15%;
     padding: 1em;
     border: 1px solid #455162; 
+    z-index: 100;
+    background: #fff;
+    position: relative;
 }
 
 .hidden {
@@ -35,4 +44,21 @@ html, body {
     right: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.component {
+    border: 1px solid #373a3c;
+    border-radius: 0.25em;
+    padding: 1em;
+}
+
+.alert {
+    border: 1px solid #C83500;
+    margin: 0.5em;
+    padding: 0.5em;
+    color: #C83500;
+}
+
+.alert .btn {
+    background-color: #C83500;
 }
