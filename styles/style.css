@@ -62,3 +62,8 @@ html, body {
 .alert .btn {
     background-color: #C83500;
 }
+
+/* role btn */
+.toggleBtn[aria-pressed="true"] {
+    background-color: blue;
+}
