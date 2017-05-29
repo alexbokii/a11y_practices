@@ -67,3 +67,10 @@ html, body {
 .toggleBtn[aria-pressed="true"] {
     background-color: blue;
 }
+
+/* role link */
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
