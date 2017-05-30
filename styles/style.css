@@ -74,3 +74,21 @@ html, body {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* role checkbox */
+.checkbox {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #333;
+    margin-left: 10px;
+    position: relative;
+}
+
+.checkbox-checked:after {
+    content: "\00d7";
+    position: absolute;
+    top: 0;
+    left: 0.25em;
+
+}

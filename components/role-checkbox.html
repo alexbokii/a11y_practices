@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- checkbox (role) - Widget Roles -->
+    <!-- A checkable input that has three possible values: true, false, or mixed. -->
+    <!-- The aria-checked attribute of a checkbox indicates whether the input is checked (true), unchecked (false), or represents a group of elements that have a mixture of checked and unchecked values (mixed). Many checkboxes do not use the mixed value, and thus are effectively boolean checkboxes. -->
+    
+    <h1>ARIA checkbox role Example</h1>
+
+    <div class="component" id="checkboxComponent">
+        <div>
+            <h2>Choose an option</h2>
+
+            <span class="checkbox" role="checkbox" aria-checked="false" tabindex="0" id="chbox1" data-value="A"></span>
+            <label for="chbox1">A</label>
+
+            <span class="checkbox" role="checkbox" aria-checked="false" tabindex="0" id="chbox2" data-value="B"></span>
+            <label for="chbox2">B</label>
+
+            <span class="checkbox" role="checkbox" aria-checked="false" tabindex="0" id="chbox3" data-value="C"></span>
+            <label for="chbox3">C</label>
+
+            <span class="checkbox" role="checkbox" aria-checked="false" tabindex="0" id="chbox4" data-value="D"></span>
+            <label for="chbox4">D</label>
+
+            <span class="checkbox" role="checkbox" aria-checked="false" tabindex="0" id="chbox5" data-value="E"></span>
+            <label for="chbox5">E</label>
+        </div>
+
+        <button class="btn" id="showCheckedBtn">Get checked checkboxes</button>
+    </div>
+    <script type="text/javascript" src="../scripts/role-checkbox.js"></script>
+
+</body>
+</html>
