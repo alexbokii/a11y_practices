@@ -90,5 +90,30 @@ html, body {
     position: absolute;
     top: 0;
     left: 0.25em;
+}
 
+/* role radiogroup */
+[role=radio] {
+    display: block;
+    margin: 1em;
+}
+
+[role=radio]:before {
+    content: '';
+    display: block;
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #333;
+}
+
+[role=radio][aria-checked=true]:before {
+    content: '';
+    display: block;
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
 }

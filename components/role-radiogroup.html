@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- radiogroup (role) Widget Roles - Composite user interface widgets -->
+    <!-- A group of radio buttons. -->
+    <!-- A radiogroup is a type of select list that can only have a single entry checked at any one time. Authors SHOULD enforce that only one radio button in a group can be checked at the same time. When one item in the group is checked, the previously checked item becomes unchecked (its aria-checked attribute becomes false). -->
+    
+    <h1>ARIA radiogroup role Example</h1>
+
+    <div class="component" id="radiogroupComponent">
+        <div>
+            <h2>Choose an option</h2>
+
+            <span class="radio" role="radio" aria-checked="false" tabindex="0" id="r1" data-value="A" data-id="1">A</span>
+
+            <span class="radio" role="radio" aria-checked="false" tabindex="-1" id="r2" data-value="B" data-id="2">B</span>
+
+            <span class="radio" role="radio" aria-checked="false" tabindex="-1" id="r3" data-value="C" data-id="3">C</span>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="../scripts/role-radiogroup.js"></script>
+
+</body>
+</html>
