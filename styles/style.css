@@ -117,3 +117,15 @@ html, body {
     border-radius: 50%;
     background-color: #333;
 }
+
+/* role grid */
+.gr-row {
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.gr-cell {
+    float: left;
+    padding: 0.5em 0.75em;
+    border-right: 1px solid #333;
+}
