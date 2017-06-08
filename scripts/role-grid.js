@@ -27,12 +27,22 @@ function findNeighbouringGridListCell(keyCode) {
         if(activeElement === firstGridlistCell) {
             selectGridListCell(lastGridlistCell);
         }
+        else {
+            let currentFocusIndex = findIndexInNode(activeElement);
+            let nextFocusIndex = currentFocusIndex - 1;
+            selectGridListCell(gridlistCell[nextFocusIndex]);
+        }
 
     }
     else if(keyCode === 39 || keyCode === 40) {
         // right
         if(activeElement === lastGridlistCell) {
-            selectGridListCell(firstGridlistCell)
+            selectGridListCell(firstGridlistCell);
+        }
+        else {
+            let currentFocusIndex = findIndexInNode(activeElement);
+            let nextFocusIndex = currentFocusIndex + 1;
+            selectGridListCell(gridlistCell[nextFocusIndex]);
         }
 
     }
@@ -45,4 +55,13 @@ function selectGridListCell(el) {
 
     el.setAttribute('tabindex', '0');
     el.focus();
+}
+
+function findIndexInNode(el) {
+    for (let i = 0; i < gridlistCell.length; i++) {
+        if (gridlistCell[i] == el) {
+            return i;
+        }
+    }
+    return -1;
 }
