@@ -27,7 +27,6 @@ function changeRadio(el, key) {
     let indexOfCurrentlyChecked = findIndexInNode(lastChecked);
 
     if(!checked) {
-        console.log("Doo");
         checkRadiobutton(firstTabStop);
     }
     

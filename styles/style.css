@@ -26,6 +26,11 @@ html, body {
     padding: 0.5em 1em;
 }
 
+.btn-block {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .modal {
     margin: 0 auto;
     width: 50%;
@@ -133,4 +138,19 @@ html, body {
     float: left;
     padding: 0.5em 0.75em;
     border-right: 1px solid #333;
+}
+
+/* role textbox */
+.textbox-input {
+    width: 10em;
+    line-height: 1.5em;
+    border: 1px solid #333;
+    padding: 0.25em;
+}
+
+.textbox-textarea {
+    width: 10em;
+    line-height: 1.5em;
+    border: 1px solid #333;
+    padding: 0.25em;
 }

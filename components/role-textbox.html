@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- textbox (role) - Widget Role -->
+    <!-- Input that allows free-form text as its value. -->
+    <!-- If the aria-multiline attribute is true, the widget accepts line breaks within the input, as in an HTML textarea. Otherwise, this is a simple text box. The intended use is for languages that do not have a text input element, or cases in which an element with different semantics is repurposed as a text field. -->
+    
+    <h1>ARIA textbox role Example</h1>
+
+    <div class="component" id="textboxComponent">
+        <h2>Textbox - input</h2>
+        <div class="textbox-input" role="textbox" tabindex="0" contenteditable="true" id="textboxInput"></div>
+
+        <h2>Textbox - input required</h2>
+        <div class="textbox-input" role="textbox" aria-required="true" tabindex="0" contenteditable="true" id="textboxInput"></div>
+
+        <h2>Textbox - textarea</h2>
+        <div class="textbox-textarea" role="textbox" tabindex="0" aria-multiline="true" id="textboxText" contenteditable="true"></div>
+
+        <button class="btn btn-block" id="textboxBtn">Get textbox values</button>
+    </div>
+    <script type="text/javascript" src="../scripts/role-textbox.js"></script>
+
+</body>
+</html>
