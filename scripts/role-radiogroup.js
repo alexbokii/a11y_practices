@@ -6,7 +6,7 @@ radio.forEach(r => r.addEventListener('click', function(ev) {
     radio.forEach(r => {
         r.setAttribute('aria-checked', false);
     });
-    ev.target.setAttribute('aria-checked', true);
+    checkRadiobutton(ev.target);
 }));
 
 radio.forEach(r => r.addEventListener('keydown', function(ev) {
@@ -23,38 +23,23 @@ function changeRadio(el, key) {
     });
 
     const firstTabStop = radio[0];
-    const firstTabStopId = firstTabStop.getAttribute('data-id');
     const lastTabStop = radio[radio.length - 1];
-    const lastTabStopId = lastTabStop.getAttribute('data-id');
+    let indexOfCurrentlyChecked = findIndexInNode(lastChecked);
 
     if(!checked) {
+        console.log("Doo");
         checkRadiobutton(firstTabStop);
-        checked = true;
     }
     
     else {
         if (key === 38) {
             // move up
-            if(lastChecked.getAttribute('data-id') === firstTabStopId) {
-                checkRadiobutton(lastTabStop);
-            }
-            else {
-                const newId = parseInt(lastChecked.getAttribute('data-id')) - 1;
-                let newChecked = document.querySelector('[data-id="' + newId + '"]');
-                checkRadiobutton(newChecked);
-            }
+            lastChecked === firstTabStop ? checkRadiobutton(lastTabStop) : checkRadiobutton(radio[indexOfCurrentlyChecked - 1]);
         }
  
         else if (key === 40) {
             // down arrow
-            if(lastChecked.getAttribute('data-id') === lastTabStopId) {
-                checkRadiobutton(firstTabStop);
-            }
-            else {
-                const newId = parseInt(lastChecked.getAttribute('data-id')) + 1;
-                let newChecked = document.querySelector('[data-id="' + newId + '"]');
-                checkRadiobutton(newChecked);
-            }
+            lastChecked === lastTabStop ? checkRadiobutton(firstTabStop) : checkRadiobutton(radio[indexOfCurrentlyChecked + 1]);
         }
     }   
 }
@@ -63,4 +48,14 @@ function checkRadiobutton(el) {
     el.setAttribute('tabindex', '0');
     el.focus();
     lastChecked = el;
+    checked = true;
+}
+
+function findIndexInNode(el) {
+    for (let i = 0; i < radio.length; i++) {
+        if (radio[i] == el) {
+            return i;
+        }
+    }
+    return -1;
 }
