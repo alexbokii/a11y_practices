@@ -154,3 +154,25 @@ html, body {
     border: 1px solid #333;
     padding: 0.25em;
 }
+
+/* role combobox */
+.combobox {
+    height: 2em;
+}
+
+.hidden {
+    display: none;
+}
+
+.listbox {
+    list-style: none;
+    border: 1px solid #333;
+
+}
+
+.listbox li {
+    border-bottom: 1px solid #f2e8e8;
+    padding: 0.25em;
+    cursor: pointer;
+
+}

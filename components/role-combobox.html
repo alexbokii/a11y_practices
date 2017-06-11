@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- combobox (role) - Widget Roles -->
+    <!-- A presentation of a select; usually similar to a textbox where users can type ahead to select an option, or type to enter arbitrary text as a new item in the list. -->
+    <!-- combobox is the combined presentation of a single line textfield with a listbox popup. The combobox may be editable. Typically editable combo boxes are used for autocomplete behavior, and authors SHOULD set aria-autocomplete attribute on the textfield. -->
+    
+    <h1>ARIA combobox role Example</h1>
+
+    <div class="component" id="comboboxComponent">
+        <div>
+            <h2>Choose an option</h2>
+
+            <input type="text" aria-label="Tag" role="combobox" aria-expanded="true"
+              aria-autocomplete="list" aria-owns="owned_listbox" aria-activedescendant="selected_option" id="combobox" class="combobox">
+            <ul role="listbox" id="owned_listbox" class="listbox hidden">
+              <li role="option">Avocado</li>
+              <li role="option">Brokkoli</li>
+              <li role="option">Spinach</li>
+            </ul>
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="../scripts/role-combobox.js"></script>
+
+</body>
+</html>
