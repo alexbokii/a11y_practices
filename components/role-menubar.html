@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- menubar (role) - Widget Roles -->
+    <!-- A presentation of menu that usually remains visible and is usually presented horizontally. -->
+    <!-- The menubar role is used to create a menu bar similar to those found in Windows, Mac, and Gnome desktop applications. A menu bar is used to create a consistent set of frequently used commands. Authors SHOULD ensure that menubar interaction is similar to the typical menu bar interaction in a desktop graphical user interface. -->
+    
+    <h1>ARIA menubar role Example</h1>
+
+    <div class="component" id="menubarComponent">
+        <ul role="menubar" class="menubar-inline" id="menubar">
+            <li><a role="menuitem" class="menuitem" href="role-link.html">Link</a></li>
+            <li><a role="menuitem" class="menuitem" href="role-grid.html" tabindex="-1">Grid</a></li>
+            <li><a role="menuitem" class="menuitem" href="role-textbox.html" tabindex="-1">Textbox</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="../scripts/role-menubar.js"></script>
+</body>
+</html>

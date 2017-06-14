@@ -182,3 +182,15 @@ html, body {
     background-color: white;
     color: #333;
 }
+
+/* role menubar */
+.menubar-inline li {
+    display: inline-block;
+    list-style: none;
+}
+
+.menubar-inline li a {
+    display: block;
+    float: left;
+    padding: 0.5em 1em;
+}

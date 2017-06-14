@@ -34,6 +34,13 @@ document.addEventListener('keydown', function(ev) {
     }
 });
 
+// open list on enter key press event if combobox is focused
+document.addEventListener('keydown', function(ev) {
+    if(ev.keyCode === 13 && document.activeElement === combobox) {
+        showListOptions();
+    }
+});
+
 function moveInList(direction) {
     if(direction === 'up') {
         selectedListElement === 0 ? updateSelected(listOptions.length - 1) : updateSelected(selectedListElement - 1);
