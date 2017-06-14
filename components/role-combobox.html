@@ -12,20 +12,18 @@
     <h1>ARIA combobox role Example</h1>
 
     <div class="component" id="comboboxComponent">
-        <div>
-            <h2>Choose an option</h2>
-
-            <input type="text" aria-label="Tag" role="combobox" aria-expanded="true"
+          <h2>Choose an option</h2>
+          <div>
+              <input type="text" aria-label="Tag" role="combobox" aria-expanded="true"
               aria-autocomplete="list" aria-owns="owned_listbox" aria-activedescendant="selected_option" id="combobox" class="combobox">
-            <ul role="listbox" id="owned_listbox" class="listbox hidden">
-              <li role="option">Avocado</li>
-              <li role="option">Brokkoli</li>
-              <li role="option">Spinach</li>
-            </ul>
-            
+              <button class="btn arrow" id="comboboxBtn">v</button>
+              <ul role="listbox" id="owned_listbox" class="listbox hidden">
+                  <li role="option">Avocado</li>
+                  <li role="option">Brokkoli</li>
+                  <li role="option">Spinach</li>
+              </ul>
+            </div>
         </div>
-    </div>
     <script type="text/javascript" src="../scripts/role-combobox.js"></script>
-
 </body>
 </html>

@@ -1,67 +1,57 @@
 const listbox = document.getElementById('owned_listbox');
 const combobox = document.getElementById('combobox');
 const listOptions = document.querySelectorAll('[role="option"]');
+const comboboxBtn = document.getElementById('comboboxBtn');
 let selectedListElement;
 
-// Open listbox on click or on focus
-combobox.addEventListener('focus', function() {
-    listbox.classList.remove('hidden');
+// open/close list
+comboboxBtn.addEventListener('click', function() {
+    showListOptions();
 });
 
-// SelectListElement from the listbox
-listOptions.forEach(option => option.addEventListener('click', function(ev) {
-   useListOption(ev.target);
-}));
+function showListOptions() {
+    listbox.classList.contains('hidden') ? listbox.classList.remove('hidden') : listbox.classList.add('hidden');
+}
+ 
+// update combobox value - initially it's the first option
+updateSelected(0);
 
-function useListOption(el) {
-    el.setAttribute('id', 'selectedOption');
-    combobox.value = el.innerText;
+// update combobox value
+function updateSelected(index) {
+    selectedListElement = index;
+    combobox.value = listOptions[index].innerHTML;
+    showSelectedInList(index);
 }
 
-// Move upward/downward in list
+// move throughout the list on keydown
 document.addEventListener('keydown', function(ev) {
-    if(ev.keyCode === 38 || ev.keyCode === 40) {
-        moveInList(ev.keyCode);
+    if(ev.keyCode === 38) {
+        moveInList('up');
+    }
+
+    else if(ev.keyCode === 40) {
+        moveInList('down');
     }
 });
 
-function moveInList(keyCode) {
-    const firstOption = listOptions[0];
-    const lastOption = listOptions[listOptions.length - 1];
-
-    // if combobox value is empty focus on first option
-    if(!selectedListElement) {
-        focusElementInList(firstOption);
-        return;
+function moveInList(direction) {
+    if(direction === 'up') {
+        selectedListElement === 0 ? updateSelected(listOptions.length - 1) : updateSelected(selectedListElement - 1);
     }
 
-    let selectedId = findIndexInNode(selectedListElement);
-
-    if(keyCode === 38) {
-        // up
-        selectedListElement === firstOption ? focusElementInList(lastOption) : focusElementInList(listOptions[selectedId - 1]);
-    }
-    else {
-        // down
-        selectedListElement === lastOption ? focusElementInList(firstOption) : focusElementInList(listOptions[selectedId + 1]);
+    else if(direction === 'down') {
+        selectedListElement === listOptions.length - 1 ? updateSelected(0) : updateSelected(selectedListElement + 1);
     }
 }
 
-function focusElementInList(el) {
+function showSelectedInList(index) {
     listOptions.forEach(o => {
         o.setAttribute('tabindex', '-1');
     });
 
-    el.setAttribute('tabindex', '0');
-    el.focus();
-    selectedListElement = el;
+    listOptions[index].setAttribute('tabindex', '0');
+    listOptions[index].focus();
 }
 
-function findIndexInNode(el) {
-    for (let i = 0; i < listOptions.length; i++) {
-        if (listOptions[i] == el) {
-            return i;
-        }
-    }
-    return -1;
-}
+/* ToDo - input value - disable editing  */
+
