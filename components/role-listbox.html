@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- listbox (role) - Widget role-->
+    <!-- A widget that allows the user to select one or more items from a list of choices. See related combobox and list. -->
+
+    <!-- Items within the list are static and, unlike standard HTML select elements, may contain images. List boxes contain children whose role is option. -->
+
+    <!-- To be keyboard accessible, authors SHOULD manage focus of descendants for all instances of this role. -->
+
+    <!-- option (role) -->
+
+    <!-- A selectable item in a select list.
+
+    Authors MUST ensure elements with role option are contained in, or owned by, an element with the role listbox. Options not associated with a listbox might not be correctly mapped to an accessibility API. -->
+
+
+    <h1>ARIA listboxп role Example</h1>
+    
+    <div class="component" id="listboxComponent">
+        <ul role="listbox" id="listbox" class="listbox">
+            <li role="option" class="listbox-option" tabindex="0" aria-selected="false">Option 1</li>
+            <li role="option" class="listbox-option" aria-selected="false">Option 2</li>
+            <li role="option" class="listbox-option" aria-selected="false">Option 3</li>
+            <li role="option" class="listbox-option" aria-selected="false">Option 4</li>
+            <li role="option" class="listbox-option" aria-selected="false">Option 5</li>
+            <li role="option" class="listbox-option" aria-selected="false">Option 6</li>
+            <li role="option" class="listbox-option" aria-selected="false">Option 7</li>
+        </ul>
+    </div>
+    
+    <script type="text/javascript" src="../scripts/role-listbox.js"></script>
+
+</body>
+</html>

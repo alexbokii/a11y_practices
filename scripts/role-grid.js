@@ -49,9 +49,7 @@ function findNeighbouringGridListCell(keyCode) {
 }
 
 function selectGridListCell(el) {
-    gridlistCell.forEach(gc => gc.addEventListener('click', function(ev) {
-        gc.setAttribute('tabindex', '-1');
-    }));
+    gridlistCell.forEach(gc => gc.setAttribute('tabindex', '-1'));
 
     el.setAttribute('tabindex', '0');
     el.focus();

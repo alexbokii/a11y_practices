@@ -194,3 +194,8 @@ html, body {
     float: left;
     padding: 0.5em 1em;
 }
+
+/* role listbox */
+.listbox li[aria-selected='true'] {
+    background-color: #3dd8eb;
+}
