@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- progressbar (role) - Widget Roles -->
+    <!-- An element that displays the progress status for tasks that take a long time. -->
+
+    <!-- A progressbar indicates that the user's request has been received and the application is making progress toward completing the requested action. The author SHOULD supply values for aria-valuenow, aria-valuemin, and aria-valuemax, unless the value is indeterminate, in which case the author SHOULD omit the aria-valuenow attribute. Authors SHOULD update these values when the visual progress indicator is updated. If the progressbar is describing the loading progress of a particular region of a page, the author SHOULD use aria-describedby to point to the status, and set the aria-busy attribute to true on the region until it is finished loading. It is not possible for the user to alter the value of a progressbar because it is always readonly. -->
+
+    <h1>ARIA progressbar role Example</h1>
+    <div class="component progressbarComponent">
+        <h2>Basic progressbar</h2>
+        <button class="btn" id="progressBtn">Start</button>
+        <div role="progressbar" aria-valuemin='0' aria-valuemax='100' aria-valuenow='0' id="progressbar" class="progressbar" aria-live="assertive">
+            <div class="progressbar-outher" id="progressbar-outher"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../scripts/role-progressbar.js"></script>
+</body>
+</html>
