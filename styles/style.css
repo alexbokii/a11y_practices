@@ -208,7 +208,7 @@ html, body {
     margin-top: 1em;
 }
 
-.progressbar-outher {
+.progressbar-inner {
     background-color: #dff0d8;
     width: 0%;
     height: 100%;

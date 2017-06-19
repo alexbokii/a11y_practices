@@ -1,6 +1,6 @@
 const progressbar = document.getElementById('progressbar');
 const progressBtn = document.getElementById('progressBtn');
-const progressDivEl = document.getElementById('progressbar-outher');
+const progressDivEl = document.getElementById('progressbar-inner');
 
 progressBtn.addEventListener('click', function() {
     runProgress();
