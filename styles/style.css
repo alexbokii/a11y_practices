@@ -213,3 +213,30 @@ html, body {
     width: 0%;
     height: 100%;
 }
+
+/* role slider */
+.slider {
+    width: 100%;
+    height: 1em;
+    border: 1px solid #dff0d8;
+    position: relative;
+}
+
+.slider-handle {
+    width: 0.5em;
+    height: 2em;
+    background-color: #f39c12;
+    position: absolute;
+    left: 0%;
+}
+
+.slider.is-active {
+    background-color: #dff0d8;
+}
+
+/* status role */
+.status {
+    margin: 1em 0;
+    border: 3px solid #498ae8;
+    padding: 1px;
+}
