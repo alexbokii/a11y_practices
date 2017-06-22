@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA role tablist</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- tablist (role) - Widget Roles -->
+   <!-- A list of tab elements, which are references to tabpanel elements. -->
+    
+    <h1>ARIA grid role Example</h1>
+
+    <div class="component" id="tabpanelComponent">
+        <h2>Tabpanel</h2>
+        <ul role="tablist" class="list-tabs">
+            <li role='tab' aria-controls="tabpanel1" aria-selected="true" class="tab" tabindex="1">First Tab</li>
+            <li role='tab' aria-controls="tabpanel2" aria-selected="false" class="tab" tabindex="1">Second Tab</li>
+            <li role='tab' aria-controls="tabpanel3" aria-selected="false" class="tab" tabindex="1">Third Tab</li>
+        </ul>
+        <div role="tabpanel" id="tabpanel1" aria-hidden="false" class="tabpanel">
+            Tabpanel one content
+        </div>
+        <div role="tabpanel" id="tabpanel2" aria-hidden="true" class="tabpanel">
+            Tabpanel two content
+        </div>
+        <div role="tabpanel" id="tabpanel3" aria-hidden="true" class="tabpanel">
+            Tabpanel three content
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../scripts/role-tabpanel.js"></script>
+</body>
+</html>
