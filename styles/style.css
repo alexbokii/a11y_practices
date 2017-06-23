@@ -270,3 +270,8 @@ html, body {
 .tabpanel[aria-hidden='true'] {
     display: none;
 }
+
+/* role tree*/
+.subitems[aria-hidden='true'] {
+    display: none;
+}

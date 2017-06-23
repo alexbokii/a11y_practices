@@ -6,8 +6,19 @@
 </head>
 <body>
     <!-- tablist (role) - Widget Roles -->
-   <!-- A list of tab elements, which are references to tabpanel elements. -->
-    
+    <!-- A list of tab elements, which are references to tabpanel elements. -->
+
+    <!-- tabpanel (role) - Widget roles -->
+    <!-- A container for the resources associated with a tab, where each tab is contained in a tablist. -->
+    <!-- Authors SHOULD associate a tabpanel element with its tab, either by using the aria-controls attribute on the tab to reference the tab panel, or by using the aria-labelledby attribute on the tab panel to reference the tab. -->
+
+    <!-- tab(role) - Widget roles -->
+   <!--  A grouping label providing a mechanism for selecting the tab content that is to be rendered to the user.
+
+    If a tabpanel or item in a tabpanel has focus, the associated tab is the currently active tab in the tablist, as defined in Managing Focus. tablist elements, which contain a set of associated tab elements, are typically placed near a series of tabpanel elements, usually preceding it. See the WAI-ARIA Authoring Practices Guide [ARIA-PRACTICES] for details on implementing a tab set design pattern.
+
+    Authors MUST ensure elements with role tab are contained in, or owned by, an element with the role tablist. -->
+
     <h1>ARIA grid role Example</h1>
 
     <div class="component" id="tabpanelComponent">

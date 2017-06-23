@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA role tree</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- tree (role) - Widget Role -->
+    
+    
+    <h1>ARIA textbox tree Example</h1>
+
+    <div class="component" id="treeComponent">
+        <ul role="tree" id="three">
+            <li role="treeitem" class="treeitem" tabindex="0" aria-expanded="false">List A
+                <ul class="subitems" role="group" aria-hidden="true">
+                    <li class="subitem">sub item A</li>
+                    <li class="subitem">sub item A</li>
+                    <li class="subitem">sub item A</li>
+                </ul>
+            </li>
+            <li role="treeitem" class="treeitem" tabindex="0" aria-expanded="false">List B
+                <ul class="subitems" role="group" aria-hidden="true">
+                    <li class="subitem">sub item B</li>
+                    <li class="subitem">sub item B</li>
+                    <li class="subitem">sub item B</li>
+                </ul>
+            </li>
+            <li role="treeitem" class="treeitem" tabindex="0" aria-expanded="false">List C
+                <ul class="subitems" role="group" aria-hidden="true">
+                    <li class="subitem">sub item c</li>
+                    <li class="subitem">sub item C</li>
+                    <li class="subitem">sub item C</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="../scripts/role-tree.js"></script>
+
+</body>
+</html>
