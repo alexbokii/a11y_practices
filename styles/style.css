@@ -275,3 +275,21 @@ html, body {
 .subitems[aria-hidden='true'] {
     display: none;
 }
+
+/* role tooltip */
+.tooltip-container {
+    position: relative;
+    background-color: #dff0d8;
+}
+
+.tooltip {
+    position: absolute;
+    top: -1em;
+    left: 0;
+    background-color: #f1e46e; 
+    white-space: nowrap;
+}
+
+.tooltip[aria-hidden='true'] {
+    display: none;
+}
