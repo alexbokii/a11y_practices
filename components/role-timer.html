@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAI-ARIA role timer</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <!-- timer (role) - Widget Roles -->
+
+    <!--A type of live region containing a numerical counter which indicates an amount of elapsed time from a start point, or the time remaining until an end point.
+
+    The text contents of the timer object indicate the current time measurement, and are updated as that amount changes. The timer value is not necessarily machine parsable, but authors SHOULD update the text contents at fixed intervals, except when the timer is paused or reaches an end-point. -->
+
+    <h1>ARIA progressbar role Example</h1>
+    <div class="component timerComponent">
+        <div>Set up alarm for <input type="number" id="seconds"/> seconds</div>
+        <button class="btn" id="timerBtn">Start</button>
+        <div role="timer" aria-live="off" id="timerMsg"></div>
+    </div>
+
+    <script type="text/javascript" src="../scripts/role-timer.js"></script>
+</body>
+</html>
