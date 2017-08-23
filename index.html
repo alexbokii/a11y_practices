@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ally-practices</title>
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Ally-practices</h1>
+    <h3>What is this project</h3>
+    <p>WAI-ARIA (Accessible Rich Internet Applications) - is a set of special accessibility attributes which can be added to any markup.</p>
+    <p>WAI-ARIA contains two categories of attributes - roles and states & properties. This project is about roles - I've implemented in HTML and Javascript almost all of the WAI-ARIA roles.</p>
+
+    <h3>When to use WAI-ARIAroles</h3>
+    <p>The main purpose of ARIA is to make a web page more accessible, especially for a screen reader users. We should use ARIA attributes as an addition to a semantic markup. For example, we need to use button element instead of using div class="button" role="button". So as button element exists in HTML, we don't need to use the aria-role button. Another example is dialog. We have a dialog element in HTML, but it's not supported by vast majority of browsers. This is a good use case for aria-role alertdialog - div role="alertdialog</p>
+
+    <h3>More information</h3>
+    <p>Specification is here <a href="http://w3c.github.io/aria/aria/aria.html" target="_blank">W3C's Accessible Rich Internet Applications (WAI-ARIA) 1.1</a></p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics" target="_blank">WAI-ARIA on MDN</a></p>
+    
+    <h3>Examples</h3>
+    <p>WAI-ARIA roles that are likely to be used with HTML language are highlighted in green.</p>
+    <ul class="u-list">
+        <li class="highlighted"><a href="components/role-alert.html" target="_blank">Alert</a></li>
+        <li class="highlighted"><a href="components/role-alertdialog.html" target="_blank">Alertdialog</a></li>
+        <li><a href="components/role-button.html" target="_blank">Button</a></li>
+        <li><a href="components/role-checkbox.html" target="_blank">Checkbox</a></li>
+        <li class="highlighted"><a href="components/role-combobox.html" target="_blank">Combobox</a></li>
+        <li class="highlighted"><a href="components/role-grid.html" target="_blank">Grid</a></li>
+        <li><a href="components/role-link.html" target="_blank">Link</a></li>
+        <li class="highlighted"><a href="components/role-listbox.html" target="_blank">Listbox</a></li>
+        <li class="highlighted"><a href="components/role-log.html" target="_blank">Log</a></li>
+        <li class="highlighted"><a href="components/role-menubar.html" target="_blank">Menubar</a></li>
+        <li><a href="components/role-progressbar.html" target="_blank">Progressbar</a></li>
+        <li class="highlighted"><a href="components/role-radiogroup.html" target="_blank">Radiogroup</a></li>
+        <li class="highlighted"><a href="components/role-status.html" target="_blank">Status</a></li>
+        <li class="highlighted"><a href="components/role-tabpanel.html" target="_blank">Tabpanel</a></li>
+        <li><a href="components/role-textbox.html" target="_blank" target="_blank">Textbox</a></li>
+        <li class="highlighted"><a href="components/role-imer.html" target="_blank">Timer</a></li>
+        <li><a href="components/role-tooltip.html" target="_blank">Tooltip</a></li>
+        <li class="highlighted"><a href="components/role-tree.html" target="_blank">Tree</a></li>
+    </ul>
+  </div>
+</body>
+</html>
